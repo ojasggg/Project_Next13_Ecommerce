@@ -1,7 +1,26 @@
 import React from "react";
+import Image from "next/image";
+import img from "../public/images/1.jpg";
+import { Card } from "../components";
 
 const HomePage = () => {
-  return <div>HomePage</div>;
+  return (
+    <main className="mx-auto w-[85vw]">
+      <section className="h-full w-full">
+        <Image
+          src={img}
+          alt="Heading Image"
+          className="h-[360px] w-full xl:h-[460px]"
+        />
+      </section>
+      <section>
+        <h2>Offer for you!</h2>
+        <div className="grid gap-6 lg:grid-cols-4 xl:grid-cols-5">
+          <Card />
+        </div>
+      </section>
+    </main>
+  );
 };
 
 export default HomePage;
