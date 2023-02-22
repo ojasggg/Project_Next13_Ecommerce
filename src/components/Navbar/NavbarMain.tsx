@@ -1,15 +1,40 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import { BsSearch } from "react-icons/bs";
 import { HiOutlineShoppingCart } from "react-icons/hi";
+import {
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuItemOption,
+  MenuGroup,
+  MenuOptionGroup,
+  MenuDivider,
+  Button,
+  Tooltip,
+} from "@chakra-ui/react";
+import { BiChevronDown } from "react-icons/bi";
 
 const NavbarMain = () => {
   return (
     <div className="bg-white py-3">
-      <div className="mx-auto flex w-[90vw] items-center space-x-20">
+      <div className="mx-auto flex w-[85vw] items-center space-x-10">
         <h1 className="text-xl">
           Mobile<span className="font-bold">Bazar</span>
         </h1>
+        <Menu>
+          <MenuButton as={Button} rightIcon={<BiChevronDown />}>
+            Categories
+          </MenuButton>
+          <MenuList>
+            <Link href={"/catalog/mens-fashion"}>
+              <MenuItem>Men's Fashion</MenuItem>
+            </Link>
+          </MenuList>
+        </Menu>
         {/* Input box for search functionality */}
         <div className="flex-1">
           <div className="flex w-[70%] items-center space-x-4 rounded-md border border-gray-400 p-2 px-4">
@@ -23,10 +48,12 @@ const NavbarMain = () => {
         </div>
         {/* Profile */}
         <div className="flex w-[15%] items-center justify-end space-x-6">
-          <div className="flex cursor-pointer items-center justify-center space-x-1 rounded-full p-2 text-gray-400 hover:text-orange-400">
-            <p className="text-sm">Cart</p>
-            <HiOutlineShoppingCart size={22} />
-          </div>
+          <Tooltip label="0 items in cart">
+            <div className="flex cursor-pointer items-center justify-center space-x-1 rounded-full p-2 text-gray-400 hover:text-orange-400">
+              <p className="text-sm">Cart</p>
+              <HiOutlineShoppingCart size={22} />
+            </div>
+          </Tooltip>
           <ul className="flex gap-x-2 divide-x text-sm xl:text-[16px]">
             <li>
               <Link href={"/login"}>

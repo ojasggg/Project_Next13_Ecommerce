@@ -29,7 +29,7 @@ const topNavItems: NavItem[] = [
 const NavbarTop = () => {
   return (
     <div className="bg-gray-100 py-1">
-      <div className="mx-auto flex w-[90vw] items-center justify-between">
+      <div className="mx-auto flex w-[85vw] items-center justify-between">
         <ul className="flex space-x-6">
           <li className="flex items-center space-x-2 text-[12px] font-light">
             <IoLogoAppleAppstore size={20} className="text-violet-600" />
