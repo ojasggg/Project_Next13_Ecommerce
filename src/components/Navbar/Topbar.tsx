@@ -7,7 +7,7 @@ const Topbar = () => {
     const [close, setClose] = useState<boolean>(false);
   return (
     <section className={`w-full bg-gray-300 py-1 ${ close && "hidden" } `}>
-      <div className="flex items-center m-auto w-[85vw]">
+      <div className="flex items-center m-auto w-[90vw]">
         <div className="mx-auto">
           <ul className="flex items-center text-[12px] font-light space-x-4 divide-x divide-black/40">
             <li>TechBazar eCommerce - Always free delivery</li>
