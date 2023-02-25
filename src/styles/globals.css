@@ -8,6 +8,6 @@
   }
 
   .socials {
-    @apply flex items-center space-x-1 text-[12px];
+    @apply flex items-center space-x-1 lg:text-[12px] xl:space-x-2 xl:text-[16px];
   }
 }

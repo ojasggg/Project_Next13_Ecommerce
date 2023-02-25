@@ -98,7 +98,7 @@ const pages: categoryType[] = [
 const FooterMain = () => {
   return (
     <div className="bg-white">
-      <div className="mx-auto flex w-[90vw] justify-evenly py-10">
+      <div className="mx-auto flex w-[90vw] justify-evenly py-10 xl:justify-around">
         <div className="flex h-full flex-col">
           <div className="py-6">
             <h1 className="text-2xl">
@@ -106,7 +106,7 @@ const FooterMain = () => {
             </h1>
           </div>
 
-          <div className="flex space-x-6">
+          <div className="flex space-x-12">
             <div className="flex space-x-2">
               <div>
                 <BiSupport size={30} />
@@ -150,7 +150,7 @@ const FooterMain = () => {
           <div>
             <p className="text-lg font-semibold">Find It Fast</p>
 
-            <ul className="mt-4 grid grid-cols-2 gap-2 text-[12px] font-normal">
+            <ul className="mt-4 grid grid-cols-2 gap-2 gap-x-6 text-[12px] font-normal xl:text-sm">
               {categories.map((category) => (
                 <li key={category.title}>
                   <Link href={`${category.link}`}>{category.title}</Link>
@@ -161,7 +161,7 @@ const FooterMain = () => {
           <div>
             <div className="pl-4">
               <p className="text-lg font-semibold">Customer Care</p>
-              <ul className="mt-4 flex flex-col gap-2 text-[12px] font-normal">
+              <ul className="mt-4 flex flex-col gap-2 text-[12px] font-normal xl:text-sm">
                 {pages.map((page) => (
                   <li key={page.title}>
                     <Link href={`${page.link}`}>{page.title}</Link>

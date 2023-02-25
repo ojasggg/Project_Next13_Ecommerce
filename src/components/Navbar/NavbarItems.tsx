@@ -51,12 +51,12 @@ const NavbarItems = () => {
         </ul>
 
         <ul className="flex space-x-4 divide-x divide-black/40 text-[12px] font-light xl:text-base ">
-          <li className="flex items-center space-x-2 transition-all ease-in hover:text-orange-600">
-            <Link href={"/track-your-order"}>
+          <Link href={"/track-your-order"}>
+            <li className="flex items-center space-x-2 transition-all ease-in hover:text-orange-600">
               <MdLocalShipping className="text-lg xl:text-xl" />
               <p>Track Your Order</p>
-            </Link>
-          </li>
+            </li>
+          </Link>
 
           <li>
             <div className="flex items-center space-x-2 pl-4">
@@ -67,7 +67,7 @@ const NavbarItems = () => {
                 </Link>{" "}
                 or{" "}
                 <Link href={"/login"}>
-                  <span className="text-blue-500 underline">Sign in</span>
+                  <span className="text-blue-500 underline">Log in</span>
                 </Link>
               </p>
             </div>
