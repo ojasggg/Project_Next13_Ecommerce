@@ -34,39 +34,40 @@ const navItem = [
 const NavbarItems = () => {
   return (
     <nav className="bg-white py-4 xl:py-6">
-      <div className="w-[90vw] mx-auto flex items-center justify-between">
+      <div className="mx-auto flex w-[90vw] items-center justify-between">
         <h1 className="text-2xl">
           Tech<span className="font-bold">Nepal</span>
         </h1>
 
-        <ul className="flex  space-x-6 xl:space-x-10 text-sm xl:text-base uppercase font-semibold">
+        <ul className="flex  space-x-6 text-sm font-semibold uppercase xl:space-x-10 xl:text-base">
           {navItem.map((item) => (
-            <Link href={`${item.link}`}>
-              <li className="hover:text-orange-600 transition-all ease-out">
-                {item.title}
-              </li>
-            </Link>
+            <li
+              className="transition-all ease-out hover:text-orange-600"
+              key={item.title}
+            >
+              <Link href={`${item.link}`}>{item.title}</Link>
+            </li>
           ))}
         </ul>
 
-        <ul className="font-light text-[12px] xl:text-base flex divide-x divide-black/40 space-x-4 ">
-          <Link href={"/track-your-order"}>
-            <li className="flex items-center space-x-2 hover:text-orange-600 transition-all ease-in">
+        <ul className="flex space-x-4 divide-x divide-black/40 text-[12px] font-light xl:text-base ">
+          <li className="flex items-center space-x-2 transition-all ease-in hover:text-orange-600">
+            <Link href={"/track-your-order"}>
               <MdLocalShipping className="text-lg xl:text-xl" />
               <p>Track Your Order</p>
-            </li>
-          </Link>
+            </Link>
+          </li>
 
           <li>
             <div className="flex items-center space-x-2 pl-4">
               <AiOutlineUser className="text-lg xl:text-xl" />
               <p>
                 <Link href={"/register"}>
-                  <span className="underline text-blue-500">Register</span>
+                  <span className="text-blue-500 underline">Register</span>
                 </Link>{" "}
                 or{" "}
                 <Link href={"/login"}>
-                  <span className="underline text-blue-500">Sign in</span>
+                  <span className="text-blue-500 underline">Sign in</span>
                 </Link>
               </p>
             </div>
