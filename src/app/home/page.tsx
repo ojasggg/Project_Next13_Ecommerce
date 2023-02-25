@@ -1,5 +1,5 @@
 import React from "react";
-import { Hero, ProductList } from "../components";
+import { Hero, ProductList } from "../../components";
 
 const newArrival = [
   "Top 20",
