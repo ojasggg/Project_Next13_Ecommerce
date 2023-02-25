@@ -19,8 +19,7 @@ export default function RootLayout({
         <div className="flex flex-col">
           <Navbar />
           <div className="flex">
-            <Sidebar />
-            <div className="flex-1 bg-gray-400">{children}</div>
+            <div className="flex-1">{children}</div>
           </div>
           <Footer />
         </div>
