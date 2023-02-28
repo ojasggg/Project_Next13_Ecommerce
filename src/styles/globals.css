@@ -10,4 +10,8 @@
   .socials {
     @apply flex items-center space-x-1 lg:text-[12px] xl:space-x-2 xl:text-[16px];
   }
+
+  .login-btn {
+    @apply flex w-[50%] items-center justify-center space-x-2 rounded-lg border border-gray-300 py-2;
+  }
 }
